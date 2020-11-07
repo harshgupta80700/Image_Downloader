@@ -1,12 +1,16 @@
+// To parse this JSON data, do
+//
+//     final images = imagesFromMap(jsonString);
+
 import 'package:meta/meta.dart';
 import 'dart:convert';
 
-Vehicle vehicleFromMap(String str) => Vehicle.fromMap(json.decode(str));
+ImagesModel imagesFromMap(String str) => ImagesModel.fromMap(json.decode(str));
 
-String vehicleToMap(Vehicle data) => json.encode(data.toMap());
+String imagesToMap(ImagesModel data) => json.encode(data.toMap());
 
-class Vehicle {
-  Vehicle({
+class ImagesModel {
+  ImagesModel({
     @required this.id,
     @required this.width,
     @required this.height,
@@ -28,7 +32,7 @@ class Vehicle {
   Src src;
   bool liked;
 
-  factory Vehicle.fromMap(Map<String, dynamic> json) => Vehicle(
+  factory ImagesModel.fromMap(Map<String, dynamic> json) => ImagesModel(
     id: json["id"],
     width: json["width"],
     height: json["height"],
