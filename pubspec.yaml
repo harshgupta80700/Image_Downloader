@@ -33,6 +33,10 @@ dependencies:
   mobx: ^1.2.1+2
   flutter_mobx: ^1.1.0+2
 
+  http: ^0.12.2
+
+  carousel_slider: ^2.3.1
+
 dev_dependencies:
   build_runner: ^1.10.1
   mobx_codegen: ^1.1.0+2

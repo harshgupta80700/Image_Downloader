@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:image_app/home.dart';
+import 'file:///D:/FlutterApps/image_app/lib/views/landing.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Home()
+      home: Landing()
     );
   }
 }

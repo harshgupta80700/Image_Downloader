@@ -53,11 +53,22 @@ mixin _$Images on _Images, Store {
   }
 
   @override
-  void updateimages(List<Map<String, dynamic>> data) {
+  void clearImages() {
+    final _$actionInfo =
+        _$_ImagesActionController.startAction(name: '_Images.clearImages');
+    try {
+      return super.clearImages();
+    } finally {
+      _$_ImagesActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void updateimages(ImagesModel model) {
     final _$actionInfo =
         _$_ImagesActionController.startAction(name: '_Images.updateimages');
     try {
-      return super.updateimages(data);
+      return super.updateimages(model);
     } finally {
       _$_ImagesActionController.endAction(_$actionInfo);
     }

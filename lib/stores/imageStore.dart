@@ -18,7 +18,7 @@ abstract class _Images with Store{
   bool isLoading = false;
 
   @observable
-  ObservableList images = ObservableList<Images>();
+  ObservableList images = ObservableList<ImagesModel>();
 
   @action
   void toggleIsLoading(){
@@ -26,11 +26,15 @@ abstract class _Images with Store{
   }
 
   @action
-  void updateimages(List<Map<String,dynamic>> data){
+  void clearImages(){
     images.clear();
-    data.forEach((element) {
-      images.add(ImagesModel.fromMap(element));
-    });
+  }
+
+  @action
+  void updateimages(ImagesModel model){
+    print(model.id);
+    images.add(model);
+    print(images.length);
   }
 
 
