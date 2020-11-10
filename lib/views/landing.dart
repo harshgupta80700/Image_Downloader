@@ -66,33 +66,34 @@ class _LandingState extends State<Landing> {
                 SizedBox(
                   height: 12,
                 ),
-                Expanded(
-                  child: CarouselSlider.builder(
-                      itemCount: _images.images.length,
-                      itemBuilder: (__, index) {
-                        return Padding(
-                            padding: EdgeInsets.symmetric(vertical: 10),
+                CarouselSlider.builder(
+                    itemCount: _images.images.length,
+                    itemBuilder: (__, index) {
+                      return Padding(
+                          padding: EdgeInsets.symmetric(vertical: 10),
+                          child: Hero(
+                            tag: "abc",
                             child: Container(
                               child: Image.network(
                                   _images.images[index].src.portrait,
                                   fit: BoxFit.contain),
-                            ));
-                      },
-                      options: CarouselOptions(
-                        height: MediaQuery.of(context).size.height /1.5,
-                        aspectRatio: 16 / 9,
-                        viewportFraction: 0.9,
-                        initialPage: 0,
-                        enableInfiniteScroll: true,
-                        reverse: false,
-                        autoPlay: true,
-                        autoPlayInterval: Duration(seconds: 3),
-                        autoPlayAnimationDuration: Duration(milliseconds: 800),
-                        autoPlayCurve: Curves.fastOutSlowIn,
-                        enlargeCenterPage: true,
-                        scrollDirection: Axis.horizontal,
-                      )),
-                )
+                            ),
+                          ));
+                    },
+                    options: CarouselOptions(
+                      height: MediaQuery.of(context).size.height /1.5,
+                      aspectRatio: 16 / 9,
+                      viewportFraction: 0.9,
+                      initialPage: 0,
+                      enableInfiniteScroll: true,
+                      reverse: false,
+                      autoPlay: true,
+                      autoPlayInterval: Duration(seconds: 3),
+                      autoPlayAnimationDuration: Duration(milliseconds: 800),
+                      autoPlayCurve: Curves.fastOutSlowIn,
+                      enlargeCenterPage: true,
+                      scrollDirection: Axis.horizontal,
+                    ))
               ],
             );
           },
